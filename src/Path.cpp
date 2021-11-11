@@ -54,6 +54,18 @@ Path Path::directory() const
 	return (n>=0)? _path.substring(0, n) : String(".");
 }
 
+Path Path::directoryt() const
+{
+	int n = _path.lastIndexOf(SEP);
+    n++;
+#ifdef _WIN32
+	int m = _path.lastIndexOf('/');
+    m++;
+	n = (m > n)? m : n;
+#endif
+	return (n>=0)? _path.substring(0, n) : String(".");
+}
+
 Path& Path::removeDDots()
 {
 	Array<String> parts = _path.split('/');
