@@ -78,6 +78,10 @@ public:
 	*/
 	Path directory() const;
 	/**
+	Returns the directory containing this path (with a trailing '/')
+	*/
+	Path directoryt() const;
+	/**
 	Returns this path without its extension
 	*/
 	Path noExt() const;
