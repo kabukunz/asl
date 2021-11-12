@@ -11,6 +11,12 @@ IniFile::Section IniFile::Section::clone() const
 	return s;
 }
 
+IniFile::IniFile(){}
+
+void IniFile::setIniFile(const String& fname, bool shouldwrite){
+    IniFile(fname, shouldwrite);
+}
+
 IniFile::IniFile(const String& name, bool shouldwrite)
 {
 	_modified = false;

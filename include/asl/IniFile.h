@@ -72,6 +72,10 @@ public:
 	};
 
 	/**
+	Creates an INI file empty structure
+	*/
+	IniFile();
+	/**
 	Opens an INI file from the given file
 	*/
 	IniFile(const String& fname, bool shouldwrite = true);
@@ -79,7 +83,10 @@ public:
 	Destroys the object and save the file if there were modifications
 	*/
 	~IniFile();
-
+	/**
+	Initialize an INI file empty structure
+	*/
+	void setIniFile(const String& fname, bool shouldwrite = true);
 	/**
 	Returns true if the file was read correctly
 	*/
