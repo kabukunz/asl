@@ -74,6 +74,10 @@ public:
 	};
 
 	/**
+	Creates an INI file empty structure
+	*/
+	IniFile();
+	/**
 	Opens an INI file from the given file
 	*/
 	IniFile(const String& fname, bool shouldwrite = true);

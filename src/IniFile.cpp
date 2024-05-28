@@ -11,6 +11,8 @@ namespace asl {
         s._vars = _vars.clone();
         return s;
     }
+
+    IniFile::IniFile(){}
     
     IniFile::IniFile(const String& fname, bool shouldwrite)
     {
